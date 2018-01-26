@@ -17,7 +17,6 @@ public class GUI extends JPanel implements ActionListener {
     public GUI() {
 
         initializeLabels();
-        initializeSearchResult();
 
         setLayout(new GridLayout(2,1));
         add(searchPanel);
@@ -36,13 +35,12 @@ public class GUI extends JPanel implements ActionListener {
         resultPanel.setLayout(new GridLayout(1,2));
 
         searchPanel.add(new JLabel("Search: "));
+        textField = new JTextField();
         searchPanel.add(textField);
         searchPanel.add(new JButton("Search!"));
         resultPanel.add(new JLabel("Result: "));
+        resultPicture = new JLabel();
         resultPanel.add(resultPicture);
     }
 
-    private void initializeSearchResult() {
-
-    }
 }
